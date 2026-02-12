@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Backgrounds - Warm foundation */
+  --bg-primary: #fffef2;
+  --bg-secondary: #f6f5e8;
+  --bg-subtle: #ebeade;
+  --bg-dark: #000000;
+  --bg-charcoal: #1a1a1a;
+  
+  /* Text Hierarchy - Rich contrast */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #bcbbb4;
+  --text-meta: #4a4a4a;
+  --text-white: #ffffff;
+  --text-beige: #f6f5e8;
+  
+  /* Interactive States - Minimal emphasis */
+  --interactive-base: #333333;
+  --interactive-hover: #000000;
+  --focus-outline: #252525;
+  --gold: #C6A75E;
+  
+  /* Borders & Separators */
+  --border-light: #bcbbb4;
+  --border-medium: #cccccc;
+  --border-subtle: rgba(51,51,51,0.2);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body[dir="rtl"] {
+  font-family: 'Heebo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typography System */
+.hero-large {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'Playfair Display', 'Heebo', serif;
+  color: var(--text-white);
+}
+
+.hero-medium {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.33;
+  font-family: 'Playfair Display', 'Heebo', serif;
+  color: var(--text-primary);
+}
+
+.heading-1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'Playfair Display', 'Heebo', serif;
+  color: var(--text-primary);
+}
+
+.heading-2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: 'Playfair Display', 'Heebo', serif;
+  color: var(--text-primary);
+}
+
+.heading-3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: 'Inter', 'Heebo', sans-serif;
+  color: var(--text-primary);
+}
+
+.body-large {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  font-family: 'Inter', 'Heebo', sans-serif;
+  color: var(--text-primary);
+}
+
+.body-regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: 'Inter', 'Heebo', sans-serif;
+  color: var(--text-primary);
+}
+
+.body-small {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Inter', 'Heebo', sans-serif;
+  color: var(--text-secondary);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  border-radius: 0px;
+  padding: 16px 32px;
+  min-width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', 'Heebo', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(.645,.045,.355,1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background: var(--gold);
+  color: var(--bg-dark);
+  transform: translateY(-2px);
+}
+
+.btn-primary-filled {
+  background: var(--gold);
+  color: var(--bg-dark);
+  border: 2px solid var(--gold);
+  border-radius: 0px;
+  padding: 16px 32px;
+  min-width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', 'Heebo', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(.645,.045,.355,1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary-filled:hover {
+  background: transparent;
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Inter', 'Heebo', sans-serif;
+  color: var(--gold);
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.5s ease-in-out;
+}
+
+.btn-secondary:hover:after {
+  width: calc(100% - 32px);
+}
+
+/* Utility Classes */
+.gold-accent {
+  color: var(--gold);
+}
+
+.gold-divider {
+  width: 80px;
+  height: 2px;
+  background: var(--gold);
+  margin: 24px 0;
+}
+
+.section-padding {
+  padding: 120px 40px;
+}
+
+.section-padding-small {
+  padding: 80px 40px;
+}
+
+/* Transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(.645,.045,.355,1);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-large {
+    font-size: 36px;
+  }
+  
+  .heading-1 {
+    font-size: 32px;
+  }
+  
+  .heading-2 {
+    font-size: 24px;
+  }
+  
+  .section-padding {
+    padding: 80px 24px;
+  }
+  
+  .section-padding-small {
+    padding: 60px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-large {
+    font-size: 28px;
+  }
+  
+  .heading-1 {
+    font-size: 28px;
+  }
+  
+  .heading-2 {
+    font-size: 22px;
+  }
+  
+  .section-padding {
+    padding: 60px 16px;
+  }
+  
+  .section-padding-small {
+    padding: 40px 16px;
+  }
+  
+  .btn-primary,
+  .btn-primary-filled {
+    min-width: 160px;
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
