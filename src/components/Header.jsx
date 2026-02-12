@@ -105,7 +105,7 @@ const Header = ({ language, toggleLanguage }) => {
 
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
-                    <div className='lg:hidden top-20 right-0 left-0 absolute bg-black/98 backdrop-blur-md border-[#C6A75E]/30 border-t'>
+                    <div className='lg:hidden top-20 right-0 left-0 absolute bg-black/90 border-[#C6A75E]/30 border-t'>
                         <nav className='flex flex-col gap-4 p-6'>
                             {t.nav.map((item, index) => (
                                 <button
