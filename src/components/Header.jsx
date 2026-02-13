@@ -16,7 +16,7 @@ const Header = ({ language, toggleLanguage }) => {
     const content = {
         he: {
             brand: 'גבריאלוב ברברשופ',
-            nav: ['בית', 'אודות', 'שירותים', 'גלריה', 'ליצור קשר'],
+            nav: ['בית', 'אודות', 'שירותים', 'גלריה', 'צור קשר'],
             langButton: 'EN',
         },
         en: {
@@ -50,7 +50,7 @@ const Header = ({ language, toggleLanguage }) => {
                     {/* Logo */}
                     <a
                         href='#hero'
-                        className='flex items-center gap-2 font-bold text-white hover:text-[#C6A75E] text-xl lg:text-2xl transition-smooth'
+                        className='flex items-center gap-2 font-bold text-white hover:text-[#C6A75E] text-xl lg:text-2xl transition-smooth cursor-pointer'
                         style={{
                             fontFamily: "'Playfair Display', 'Heebo', serif",
                         }}
