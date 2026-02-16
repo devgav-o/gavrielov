@@ -15,12 +15,12 @@ const Header = ({ language, toggleLanguage }) => {
 
     const content = {
         he: {
-            brand: 'גבריאלוב ברברשופ',
+            brand: 'הספּּרים',
             nav: ['בית', 'אודות', 'שירותים', 'גלריה', 'צור קשר'],
             langButton: 'EN',
         },
         en: {
-            brand: 'Gavrielov Barbershop',
+            brand: 'The Barbers',
             nav: ['Home', 'About', 'Services', 'Gallery', 'Contact'],
             langButton: 'HE',
         },
@@ -79,7 +79,7 @@ const Header = ({ language, toggleLanguage }) => {
                     {/* Right Side - Instagram + Language Toggle */}
                     <div className='hidden lg:flex items-center gap-4'>
                         <a
-                            href='https://www.instagram.com/gavrielov_barbershop/'
+                            href='https://www.instagram.com/yair_harush_thebarbers/'
                             target='_blank'
                             rel='noopener noreferrer'
                             className='text-white hover:text-[#C6A75E] transition-smooth'
@@ -122,7 +122,7 @@ const Header = ({ language, toggleLanguage }) => {
                             ))}
                             <div className='flex items-center gap-4 pt-4'>
                                 <a
-                                    href='https://www.instagram.com/gavrielov_barbershop/'
+                                    href='https://www.instagram.com/yair_harush_thebarbers/'
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='text-white hover:text-[#C6A75E] transition-smooth'

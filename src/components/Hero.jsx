@@ -38,8 +38,8 @@ const Hero = ({ language }) => {
             {/* Background Image with Overlay */}
             <div className='z-0 absolute inset-0'>
                 <img
-                    src='https://images.unsplash.com/photo-1702865262133-c10351acc1ca'
-                    alt='Gavrielov Barbershop Interior'
+                    src='background.png'
+                    alt='The Barbers Barbershop Interior'
                     className='w-full h-full object-cover'
                 />
                 <div className='absolute inset-0 bg-black/70'></div>
@@ -78,13 +78,13 @@ const Hero = ({ language }) => {
                 {/* Instagram Ico */}
                 <div className='mt-12'>
                     <a
-                        href='https://www.instagram.com/gavrielov_barbershop/'
+                        href='https://www.instagram.com/yair_harush_thebarbers/'
                         target='_blank'
                         rel='noopener noreferrer'
                         className='inline-flex items-center gap-2 text-[#C6A75E] hover:text-white transition-smooth'
                     >
                         <Instagram size={28} />
-                        <span className='text-sm'>@gavrielov_barbershop</span>
+                        <span className='text-sm'>@yair_harush_thebarbers</span>
                     </a>
                 </div>
             </div>

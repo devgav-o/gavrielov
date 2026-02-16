@@ -83,7 +83,7 @@ const Gallery = ({ language }) => {
                 {/* Instagram Link */}
                 <div className='mt-12 text-center'>
                     <a
-                        href='https://www.instagram.com/gavrielov_barbershop/'
+                        href='https://www.instagram.com/yair_harush_thebarbers/'
                         target='_blank'
                         rel='noopener noreferrer'
                         className='text-white btn-secondary'
