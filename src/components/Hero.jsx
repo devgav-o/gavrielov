@@ -75,7 +75,7 @@ const Hero = ({ language }) => {
                     </button>
                 </div>
 
-                {/* Instagram Icon */}
+                {/* Instagram Ico */}
                 <div className='mt-12'>
                     <a
                         href='https://www.instagram.com/gavrielov_barbershop/'
