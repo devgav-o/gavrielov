@@ -28,7 +28,7 @@ const About = ({ language }) => {
                     <div className='order-2 lg:order-1'>
                         <div className='relative hover-lift'>
                             <img
-                                src='https://images.unsplash.com/photo-1585747860715-2ba37e788b70?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxiYXJiZXJzaG9wfGVufDB8fHx8MTc3MDkxMDIxNHww&ixlib=rb-4.1.0&q=85'
+                                src='background2.png'
                                 alt='The Barbers Barbershop Interior'
                                 className='shadow-2xl w-full h-[500px] object-cover'
                             />
