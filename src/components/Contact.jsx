@@ -10,7 +10,7 @@ const Contact = ({ language }) => {
             phone: 'טלפון',
             whatsapp: 'WhatsApp',
             address: 'כתובת',
-            addressText: 'רחוב מורדי הגטאות 15, בית שמש',
+            addressText: 'עליית הנוער 17 בית שמש',
             hours: 'שעות פעילות',
             hoursText: [
                 'ראשון - חמישי: 09:00 - 20:00',
@@ -26,7 +26,7 @@ const Contact = ({ language }) => {
             phone: 'Phone',
             whatsapp: 'WhatsApp',
             address: 'Address',
-            addressText: 'Mordei HaGetaot St 15, Beit Shemesh',
+            addressText: "Aliyat Hano'ar St 17, Bet Shemesh",
             hours: 'Business Hours',
             hoursText: [
                 'Sunday - Thursday: 09:00 - 20:00',
@@ -39,16 +39,16 @@ const Contact = ({ language }) => {
     const t = content[language];
 
     const handleWhatsApp = () => {
-        window.open('https://wa.me/972543181489', '_blank');
+        window.open('https://wa.me/972502226952', '_blank');
     };
 
     const handlePhone = () => {
-        window.location.href = 'tel:0543181489';
+        window.location.href = 'tel:0502226952';
     };
 
     const handleGoogleMaps = () => {
         window.open(
-            'https://www.google.com/maps/search/?api=1&query=רחוב+מורדי+הגטאות+15+בית+שמש',
+            'https://www.google.com/maps/search/?api=1&query=עליית+הנוער+17+בית+שמש',
             '_blank',
         );
     };
@@ -82,7 +82,7 @@ const Contact = ({ language }) => {
                                     className='text-[#666666] body-regular'
                                     dir='ltr'
                                 >
-                                    054-318-1489
+                                    050-222-6952
                                 </p>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ const Contact = ({ language }) => {
                                     className='text-[#666666] body-regular'
                                     dir='ltr'
                                 >
-                                    054-318-1489
+                                    050-222-6952
                                 </p>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ const Contact = ({ language }) => {
                     <div className='h-[500px] lg:h-full'>
                         <iframe
                             title='The Barbers Location'
-                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3389.123456789!2d34.987654321!3d31.748765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQ0JzU1LjYiTiAzNMKwNTknMTUuNiJF!5e0!3m2!1sen!2sil!4v1234567890123!5m2!1sen!2sil'
+                            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3389.5215!2d35.2095!3d31.7471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d3ed7e6c7dbbd%3A0x7e7e7e7e7e7e7e7e!2sAliyat%20Hanoar%20St%2017%2C%20Bet%20Shemesh!5e0!3m2!1sen!2sil!4v1613546391589'
                             width='100%'
                             height='100%'
                             style={{ border: 0 }}

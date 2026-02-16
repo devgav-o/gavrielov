@@ -7,15 +7,15 @@ const Footer = ({ language }) => {
             brand: 'הספּרים',
             tagline: 'הסטייל שלך מתחיל כאן',
             copyright: '© כל הזכויות שמורות',
-            phone: '054-318-1489',
-            address: 'רחוב מורדי הגטאות 15, בית שמש',
+            phone: '050-222-6952',
+            address: 'עליית הנוער 17 בית שמש',
         },
         en: {
             brand: 'The Barbers',
             tagline: 'Your Style Starts Here',
             copyright: '© All Rights Reserved',
-            phone: '054-318-1489',
-            address: 'Mordei HaGetaot St 15, Beit Shemesh',
+            phone: '050-222-6952',
+            address: "Aliyat Hano'ar St 17, Bet Shemesh",
         },
     };
 
@@ -59,14 +59,14 @@ const Footer = ({ language }) => {
                         <div className='bg-[#C6A75E] mb-4 w-16 h-0.5'></div>
                         <div className='space-y-3'>
                             <a
-                                href='tel:0543181489'
+                                href='tel:0502226952'
                                 className='flex items-center gap-3 text-[#bcbbb4] hover:text-[#C6A75E] transition-smooth'
                             >
                                 <Phone size={18} />
                                 <span dir='ltr'>{t.phone}</span>
                             </a>
                             <a
-                                href='https://www.google.com/maps/search/?api=1&query=רחוב+מורדי+הגטאות+15+בית+שמש'
+                                href='https://www.google.com/maps/search/?api=1&query=עליית+הנוער+17+בית+שמש'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='flex items-start gap-3 text-[#bcbbb4] hover:text-[#C6A75E] transition-smooth'
@@ -118,7 +118,7 @@ const Footer = ({ language }) => {
                         </p>
                         <div className='flex items-center gap-6'>
                             <a
-                                href='https://wa.me/972543181489'
+                                href='https://wa.me/972502226952'
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className='text-[#bcbbb4] hover:text-[#C6A75E] text-sm transition-smooth'

@@ -27,7 +27,7 @@ const Hero = ({ language }) => {
     };
 
     const handleBooking = () => {
-        window.open('https://wa.me/972543181489', '_blank');
+        window.open('https://wa.me/972502226952', '_blank');
     };
 
     return (
