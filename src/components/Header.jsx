@@ -55,7 +55,11 @@ const Header = ({ language, toggleLanguage }) => {
                             fontFamily: "'Playfair Display', 'Heebo', serif",
                         }}
                     >
-                        <img src='logo2.png' alt='Logo' className='w-36' />
+                        <img
+                            src='kailogo.png'
+                            alt='Logo'
+                            className='mt-2 w-48'
+                        />
                     </a>
 
                     {/* Desktop Navigation */}
