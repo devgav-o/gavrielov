@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Instagram, ArrowDown } from 'lucide-react';
 
 const Hero = ({ language }) => {
@@ -30,6 +30,14 @@ const Hero = ({ language }) => {
         window.open('https://wa.me/972502226952', '_blank');
     };
 
+    // TEMP: Variations params
+    const [variation, setVariation] = useState('1');
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const v = params.get('variation');
+        if (v) setVariation(v);
+    });
+
     return (
         <section
             id='hero'
@@ -38,7 +46,7 @@ const Hero = ({ language }) => {
             {/* Background Image with Overlay */}
             <div className='z-0 absolute inset-0'>
                 <img
-                    src='background.png'
+                    src={`background${variation}.png`}
                     alt='The Barbers Barbershop Interior'
                     className='w-full h-full object-cover'
                 />
