@@ -36,7 +36,7 @@ const Hero = ({ language }) => {
         const params = new URLSearchParams(window.location.search);
         const v = params.get('variation');
         if (v) setVariation(v);
-    });
+    }, []);
 
     return (
         <section
