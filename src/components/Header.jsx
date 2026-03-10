@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram } from 'lucide-react';
+import { Menu, X, Instagram, MessageSquare } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = ({ language, toggleLanguage }) => {
+    const navigate = useNavigate();
+    const location = useLocation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -16,31 +19,49 @@ const Header = ({ language, toggleLanguage }) => {
     const content = {
         he: {
             brand: 'הספּּרים',
-            nav: ['בית', 'אודות', 'שירותים', 'גלריה', 'צור קשר'],
+            nav: ['בית', 'אודות', 'שירותים', 'גלריה', 'צור קשר', 'צ׳אט'],
             langButton: 'EN',
         },
         en: {
             brand: 'The Barbers',
-            nav: ['Home', 'About', 'Services', 'Gallery', 'Contact'],
+            nav: ['Home', 'About', 'Services', 'Gallery', 'Contact', 'Chat'],
             langButton: 'HE',
         },
     };
 
     const t = content[language];
 
-    const scrollToSection = (index) => {
-        const sections = ['hero', 'about', 'services', 'gallery', 'contact'];
-        const element = document.getElementById(sections[index]);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+    const handleNavClick = (index) => {
+        if (index === 5) {
+            navigate('/chat');
             setIsMobileMenuOpen(false);
+            return;
         }
+
+        if (location.pathname !== '/') {
+            navigate('/');
+            // Small delay to allow navigation to complete before scrolling
+            setTimeout(() => {
+                const sections = ['hero', 'about', 'services', 'gallery', 'contact'];
+                const element = document.getElementById(sections[index]);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        } else {
+            const sections = ['hero', 'about', 'services', 'gallery', 'contact'];
+            const element = document.getElementById(sections[index]);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        setIsMobileMenuOpen(false);
     };
 
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                isScrolled
+                isScrolled || location.pathname !== '/'
                     ? 'bg-black/95 backdrop-blur-md shadow-lg'
                     : 'bg-transparent'
             }`}
@@ -48,8 +69,8 @@ const Header = ({ language, toggleLanguage }) => {
             <div className='mx-auto px-6 lg:px-12 max-w-7xl'>
                 <div className='flex justify-between items-center h-20'>
                     {/* Logo */}
-                    <a
-                        href='#hero'
+                    <div
+                        onClick={() => handleNavClick(0)}
                         className='flex items-center gap-2 font-bold text-white hover:text-[#C6A75E] text-xl lg:text-2xl transition-smooth cursor-pointer'
                         style={{
                             fontFamily: "'Playfair Display', 'Heebo', serif",
@@ -60,14 +81,14 @@ const Header = ({ language, toggleLanguage }) => {
                             alt='Logo'
                             className='mt-2 w-48'
                         />
-                    </a>
+                    </div>
 
                     {/* Desktop Navigation */}
                     <nav className='hidden lg:flex items-center gap-8'>
                         {t.nav.map((item, index) => (
                             <button
                                 key={index}
-                                onClick={() => scrollToSection(index)}
+                                onClick={() => handleNavClick(index)}
                                 className='group relative font-medium text-white hover:text-[#C6A75E] transition-smooth'
                             >
                                 {item}
@@ -114,7 +135,7 @@ const Header = ({ language, toggleLanguage }) => {
                             {t.nav.map((item, index) => (
                                 <button
                                     key={index}
-                                    onClick={() => scrollToSection(index)}
+                                    onClick={() => handleNavClick(index)}
                                     className='py-2 border-gray-800 border-b font-medium text-white hover:text-[#C6A75E] text-left transition-smooth'
                                 >
                                     {item}
