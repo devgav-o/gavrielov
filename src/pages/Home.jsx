@@ -9,7 +9,7 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const Home = () => {
-  const [language, setLanguage] = useState('he');
+  const [language, setLanguage] = useState('en');
 
   useEffect(() => {
     document.body.dir = language === 'he' ? 'rtl' : 'ltr';

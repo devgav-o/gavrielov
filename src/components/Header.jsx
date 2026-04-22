@@ -86,12 +86,6 @@ const Header = ({ language, toggleLanguage }) => {
                         >
                             <Instagram size={24} />
                         </a>
-                        <button
-                            onClick={toggleLanguage}
-                            className='hover:bg-[#C6A75E] px-4 py-2 border-[#C6A75E] border-2 font-semibold text-[#C6A75E] hover:text-black transition-smooth'
-                        >
-                            {t.langButton}
-                        </button>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -129,12 +123,6 @@ const Header = ({ language, toggleLanguage }) => {
                                 >
                                     <Instagram size={24} />
                                 </a>
-                                <button
-                                    onClick={toggleLanguage}
-                                    className='hover:bg-[#C6A75E] px-4 py-2 border-[#C6A75E] border-2 font-semibold text-[#C6A75E] hover:text-black transition-smooth'
-                                >
-                                    {t.langButton}
-                                </button>
                             </div>
                         </nav>
                     </div>
